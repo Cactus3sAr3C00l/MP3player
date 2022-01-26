@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" prefHeight="291.0" prefWidth="730.0" style="-fx-background-color: rgb(255, 179, 204);" vgap="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane fx:id="pane" prefHeight="200.0" prefWidth="735.0" style="-fx-background-color: rgb(255, 179, 204);" GridPane.rowIndex="1">
+         <children>
+            <Button fx:id="playButton" layoutX="22.0" layoutY="36.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="PLAY" textAlignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="pauseButton" layoutX="160.0" layoutY="36.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="PAUSE">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="resetButton" layoutX="291.0" layoutY="36.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="RESET">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="previousButton" layoutX="443.0" layoutY="36.0" mnemonicParsing="false" onAction="#previousMedia" prefHeight="64.0" prefWidth="125.0" style="-fx-background-color: rgb(255, 230, 238);" text="PREVIOUS">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="nextButton" layoutX="587.0" layoutY="36.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238); -fx-border-color: BLACK; -fx-border-width: 0;" text="NEXT">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ComboBox fx:id="speedBox" layoutX="141.0" layoutY="128.0" onAction="#changeSpeed" prefWidth="150.0" promptText="SPEED" style="-fx-background-color: rgb(255, 230, 238);">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></ComboBox>
+            <Slider fx:id="volumeSlider" layoutX="431.0" layoutY="150.0" max="100.0" prefHeight="25.0" prefWidth="274.0" style="-fx-background-color: rgb(255, 230, 238); -fx-border-color: black;" value="50.0">
+               <cursor>
+                  <Cursor fx:constant="MOVE" />
+               </cursor></Slider>
+            <ProgressBar fx:id="songProgressBar" layoutY="180.0" prefHeight="42.0" prefWidth="730.0" progress="0.0" style="-fx-background-color: rgb(255, 230, 238);" />
+            <Label fx:id="songLabel1" alignment="CENTER" layoutX="490.0" layoutY="115.0" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: rgb(255, 230, 238);" text="VOLUME">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="songLabel" alignment="CENTER" prefHeight="64.0" prefWidth="731.0" style="-fx-background-color: rgb(255, 230, 238);" text="MUZYCZKA LECI">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+   </children>
+</GridPane>
