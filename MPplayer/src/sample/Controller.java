@@ -108,10 +108,25 @@ public class Controller implements Initializable {
         chooser.setTitle("Choose ur fighter");
         File file2= chooser.showOpenDialog(null);
         File file3 = new File("music/" + file2.getName());
-        Path src = Paths.get(file2.toString()); Path dest = Paths.get(file3.toString());
-        Files.copy(src, dest, new StandardCopyOption[]{StandardCopyOption.REPLACE_EXISTING});
 
-   songs.add(file2);
+        String extension = "";
+
+        int i = file2.toString().lastIndexOf('.');
+        if (i > 0) {
+            extension = file2.toString().substring(i+1);
+        }
+        System.out.println(extension);
+
+        if(extension.equals("mp3")) {
+            System.out.println(extension);
+            Path src = Paths.get(file2.toString());
+            Path dest = Paths.get(file3.toString());
+            Files.copy(src, dest, new StandardCopyOption[]{StandardCopyOption.REPLACE_EXISTING});
+            songs.add(file2);
+
+        }else{
+            System.out.println("NOT MP3 FILE");
+        }
     }
 
     public void pauseMedia() {
