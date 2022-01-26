@@ -78,7 +78,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Button fx:id="chooseFile" layoutX="5.0" layoutY="114.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="33.0" prefWidth="125.0" style="-fx-background-color: rgb(255, 230, 238);" text="ADD FILE" textAlignment="CENTER">
+            <Button fx:id="chooseFile" layoutX="5.0" layoutY="114.0" mnemonicParsing="false" onAction="#choosingFile" prefHeight="33.0" prefWidth="125.0" style="-fx-background-color: rgb(255, 230, 238);" text="ADD FILE" textAlignment="CENTER">
                <font>
                   <Font size="19.0" />
                </font>
