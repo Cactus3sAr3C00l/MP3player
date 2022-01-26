@@ -24,7 +24,7 @@
    <children>
       <AnchorPane fx:id="pane" prefHeight="200.0" prefWidth="735.0" style="-fx-background-color: rgb(255, 179, 204);" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="playButton" layoutX="22.0" layoutY="36.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="PLAY" textAlignment="CENTER">
+            <Button fx:id="playButton" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="PLAY" textAlignment="CENTER">
                <font>
                   <Font size="19.0" />
                </font>
@@ -32,7 +32,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="pauseButton" layoutX="160.0" layoutY="36.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="PAUSE">
+            <Button fx:id="pauseButton" layoutX="157.0" layoutY="14.0" mnemonicParsing="false" onAction="#pauseMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="PAUSE">
                <font>
                   <Font size="19.0" />
                </font>
@@ -40,7 +40,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="resetButton" layoutX="291.0" layoutY="36.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="RESET">
+            <Button fx:id="resetButton" layoutX="291.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238);" text="RESET">
                <font>
                   <Font size="19.0" />
                </font>
@@ -48,7 +48,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="previousButton" layoutX="443.0" layoutY="36.0" mnemonicParsing="false" onAction="#previousMedia" prefHeight="64.0" prefWidth="125.0" style="-fx-background-color: rgb(255, 230, 238);" text="PREVIOUS">
+            <Button fx:id="previousButton" layoutX="442.0" layoutY="14.0" mnemonicParsing="false" onAction="#previousMedia" prefHeight="64.0" prefWidth="125.0" style="-fx-background-color: rgb(255, 230, 238);" text="PREVIOUS">
                <font>
                   <Font size="19.0" />
                </font>
@@ -56,7 +56,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="nextButton" layoutX="587.0" layoutY="36.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238); -fx-border-color: BLACK; -fx-border-width: 0;" text="NEXT">
+            <Button fx:id="nextButton" layoutX="582.0" layoutY="14.0" mnemonicParsing="false" onAction="#nextMedia" prefHeight="64.0" prefWidth="91.0" style="-fx-background-color: rgb(255, 230, 238); -fx-border-color: BLACK; -fx-border-width: 0;" text="NEXT">
                <font>
                   <Font size="19.0" />
                </font>
@@ -64,7 +64,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <ComboBox fx:id="speedBox" layoutX="141.0" layoutY="128.0" onAction="#changeSpeed" prefWidth="150.0" promptText="SPEED" style="-fx-background-color: rgb(255, 230, 238);">
+            <ComboBox fx:id="speedBox" layoutX="213.0" layoutY="121.0" onAction="#changeSpeed" prefWidth="156.0" promptText="SPEED" style="-fx-background-color: rgb(255, 230, 238);">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor></ComboBox>
@@ -73,11 +73,19 @@
                   <Cursor fx:constant="MOVE" />
                </cursor></Slider>
             <ProgressBar fx:id="songProgressBar" layoutY="180.0" prefHeight="42.0" prefWidth="730.0" progress="0.0" style="-fx-background-color: rgb(255, 230, 238);" />
-            <Label fx:id="songLabel1" alignment="CENTER" layoutX="490.0" layoutY="115.0" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: rgb(255, 230, 238);" text="VOLUME">
+            <Label fx:id="songLabel1" alignment="CENTER" layoutX="490.0" layoutY="121.0" prefHeight="25.0" prefWidth="156.0" style="-fx-background-color: rgb(255, 230, 238);" text="VOLUME">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
+            <Button fx:id="chooseFile" layoutX="5.0" layoutY="114.0" mnemonicParsing="false" onAction="#playMedia" prefHeight="33.0" prefWidth="125.0" style="-fx-background-color: rgb(255, 230, 238);" text="ADD FILE" textAlignment="CENTER">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
          </children>
       </AnchorPane>
       <Label fx:id="songLabel" alignment="CENTER" prefHeight="64.0" prefWidth="731.0" style="-fx-background-color: rgb(255, 230, 238);" text="MUZYCZKA LECI">

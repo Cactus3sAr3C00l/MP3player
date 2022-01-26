@@ -1,7 +1,12 @@
 package sample;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
 
 import javafx.beans.value.ChangeListener;
@@ -17,6 +22,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.FileChooser;
 import javafx.util.Duration;
 
 public class Controller implements Initializable {
@@ -40,6 +46,7 @@ public class Controller implements Initializable {
     private File[] files;
 
     private ArrayList<File> songs;
+    List<String> lstFile;
 
     private int songNumber;
     private int[] speeds = {25, 50, 75, 100, 125, 150, 175, 200};
@@ -49,13 +56,12 @@ public class Controller implements Initializable {
 
     private boolean running;
 
+
     @Override
     public void initialize(URL arg0, ResourceBundle arg1) {
 
         songs = new ArrayList<File>();
-
         directory = new File("music");
-
         files = directory.listFiles();
 
         if(files != null) {
@@ -96,6 +102,16 @@ public class Controller implements Initializable {
         changeSpeed(null);
         mediaPlayer.setVolume(volumeSlider.getValue() * 0.01);
         mediaPlayer.play();
+    }
+    public void choosingFile(ActionEvent event) throws IOException {
+        FileChooser chooser = new FileChooser();
+        chooser.setTitle("Choose ur fighter");
+        File file2= chooser.showOpenDialog(null);
+        File file3 = new File("music/" + file2.getName());
+        Path src = Paths.get(file2.toString()); Path dest = Paths.get(file3.toString());
+        Files.copy(src, dest, new StandardCopyOption[]{StandardCopyOption.REPLACE_EXISTING});
+
+   songs.add(file2);
     }
 
     public void pauseMedia() {
